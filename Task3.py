@@ -44,17 +44,17 @@ def RungeAdaptive( F, tol, hmax, hmin,a,b ):
                 h = hmax
             elif h < hmin:
                 break
-            plt.figure(1)
-            plt.plot(X, Y)
-            plt.title('Phase Portrait')
-            plt.figure(2)
-            plt.plot(T, X)
-            plt.plot(T, Y)
-            plt.xlabel('Time values')
-            plt.ylabel('X & Y Values')
-            plt.title('Predator-Prey LogLog')
-            plt.show()
-        return (T, X , Y) #T is for time and X is the actual Approximation
+        plt.figure(1)
+        plt.plot(X, Y)
+        plt.title('Phase Portrait')
+        plt.figure(2)
+        plt.plot(T, X)
+        plt.plot(T, Y)
+        plt.xlabel('Time values')
+        plt.ylabel('X & Y Values')
+        plt.title('Predator-Prey LogLog')
+        plt.show()
+        #return (T, X , Y) #T is for time and X is the actual Approximation
                     
 A = RungeAdaptive(P, .000001, .1, .0001, 0, 10)   
 print(A)             
